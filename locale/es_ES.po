@@ -1,0 +1,43 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:product.product,training:"
+msgid "Training"
+msgstr "Formación"
+
+msgctxt "field:product.product,training_end_date:"
+msgid "End Date"
+msgstr "Fecha fin"
+
+msgctxt "field:product.product,training_place:"
+msgid "Place"
+msgstr "Lugar"
+
+msgctxt "field:product.product,training_registration:"
+msgid "Registration Date"
+msgstr "Fecha registro"
+
+msgctxt "field:product.product,training_seats:"
+msgid "Seats"
+msgstr "Plazas"
+
+msgctxt "field:product.product,training_start_date:"
+msgid "Start Date"
+msgstr "Fecha inicio"
+
+msgctxt "field:product.template,training:"
+msgid "Training"
+msgstr "Formación"
+
+msgctxt "help:product.product,training_registration:"
+msgid "Last day to registration"
+msgstr "Último día registro"
+
+msgctxt "model:ir.action,name:act_product_training_form"
+msgid "Training"
+msgstr "Formación"
+
+msgctxt "model:ir.ui.menu,name:menu_product_training"
+msgid "Training"
+msgstr "Formación"

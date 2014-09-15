@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file is part product_training module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/separator[@name='description']" 
+            position="before">
+        <group colspan="6" id="training">
+            <separator name="training" colspan="6"/>
+            <label name="training_start_date"/>
+            <field name="training_start_date"/>
+            <label name="training_end_date"/>
+            <field name="training_end_date"/>
+            <label name="training_registration"/>
+            <field name="training_registration"/>
+            <label name="training_place"/>
+            <field name="training_place"/>
+            <label name="training_seats"/>
+            <field name="training_seats"/>
+            <field name="training" invisible="1"/>
+        </group>
+    </xpath>
+</data>
