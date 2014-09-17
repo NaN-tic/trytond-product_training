@@ -53,6 +53,7 @@ class Product:
         help='Last day to registration')
     training_place = fields.Many2One('party.address', 'Place')
     training_seats = fields.Integer('Seats')
+    training_extra = fields.Char('Extra', translate=True)
 
     def get_training(self, name):
         return self.template.training if self.template else False
