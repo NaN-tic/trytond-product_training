@@ -2,7 +2,7 @@
 #The COPYRIGHT file at the top level of this repository contains
 #the full copyright notices and license terms.
 from trytond.model import fields
-from trytond.pool import PoolMeta
+from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval, Bool
 from trytond.transaction import Transaction
 from trytond.model.fields import depends
@@ -16,6 +16,20 @@ class Template:
     training = fields.Boolean('Training', states={
             'readonly': ~Eval('active', True),
             }, depends=['active'])
+    training_sessions = fields.Function(fields.One2Many('product.product', None,
+            'Sessions'), 'get_training_sessions')
+
+    def get_training_sessions(self, name):
+        '''Get current sessions (start date =< today)'''
+        Date = Pool().get('ir.date')
+        if not self.training:
+            return []
+
+        products = set()
+        for product in self.products:
+            if product.training_start_date >= Date.today():
+                products.add(product.id)
+        return list(products)
 
 
 class Product:
