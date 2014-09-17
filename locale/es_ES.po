@@ -10,6 +10,10 @@ msgctxt "field:product.product,training_end_date:"
 msgid "End Date"
 msgstr "Fecha fin"
 
+msgctxt "field:product.product,training_extra:"
+msgid "Extra"
+msgstr "Extra"
+
 msgctxt "field:product.product,training_place:"
 msgid "Place"
 msgstr "Lugar"
@@ -29,6 +33,10 @@ msgstr "Fecha inicio"
 msgctxt "field:product.template,training:"
 msgid "Training"
 msgstr "Formación"
+
+msgctxt "field:product.template,training_sessions:"
+msgid "Sessions"
+msgstr "Sesiones"
 
 msgctxt "help:product.product,training_registration:"
 msgid "Last day to registration"
