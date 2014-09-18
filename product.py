@@ -69,7 +69,10 @@ class Product:
             name = ''
             if self.code:
                 name += '[' + self.code + '] '
-            name += self.name + ' (' + str(start_date) + ' - ' + str(end_date) + ')'
+            if start_date == end_date:
+                name += self.name + ' (' + str(start_date) + ')'
+            else:
+                name += self.name + ' (' + str(start_date) + ' - ' + str(end_date) + ')'
             return name
         else:
             return super(Product, self).get_rec_name(name)
