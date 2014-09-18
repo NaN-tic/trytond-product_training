@@ -34,7 +34,8 @@ class Template:
 
 class Product:
     __name__ = 'product.product'
-    training = fields.Function(fields.Boolean('Training'), 'get_training')
+    training = fields.Function(fields.Boolean('Training'),
+        'get_training', searcher='search_training')
     training_start_date = fields.Date('Start Date',
         states={
             'required': Bool(Eval('training')),
@@ -81,3 +82,7 @@ class Product:
         if not self.training_registration and self.training_start_date:
             res['training_registration'] = self.training_start_date
         return res
+
+    @classmethod
+    def search_training(cls, name, clause):
+        return [('template.training',) + tuple(clause[1:])]
