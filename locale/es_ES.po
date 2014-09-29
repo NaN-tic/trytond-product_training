@@ -14,6 +14,10 @@ msgctxt "field:product.product,training_extra:"
 msgid "Extra"
 msgstr "Extra"
 
+msgctxt "field:product.product,training_note:"
+msgid "Training Note"
+msgstr "Nota formación"
+
 msgctxt "field:product.product,training_place:"
 msgid "Place"
 msgstr "Lugar"
