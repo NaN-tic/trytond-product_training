@@ -27,7 +27,7 @@ class Template:
 
         products = set()
         for product in self.products:
-            if product.training_start_date >= Date.today():
+            if product.training_start_date and product.training_start_date >= Date.today():
                 products.add(product.id)
         return list(products)
 
