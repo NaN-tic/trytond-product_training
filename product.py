@@ -16,8 +16,8 @@ class Template:
     training = fields.Boolean('Training', states={
             'readonly': ~Eval('active', True),
             }, depends=['active'])
-    training_sessions = fields.Function(fields.One2Many('product.product', None,
-            'Sessions'), 'get_training_sessions')
+    training_sessions = fields.Function(fields.One2Many('product.product',
+        None, 'Sessions'), 'get_training_sessions')
 
     def get_training_sessions(self, name):
         '''Get current sessions (start date =< today)'''
@@ -27,7 +27,8 @@ class Template:
 
         products = set()
         for product in self.products:
-            if product.training_start_date and product.training_start_date >= Date.today():
+            if (product.training_start_date and
+                    product.training_start_date >= Date.today()):
                 products.add(product.id)
         return list(products)
 
@@ -62,6 +63,10 @@ class Product:
     def get_training(self, name):
         return self.template.training if self.template else False
 
+    @classmethod
+    def search_training(cls, name, clause):
+        return [('template.training',) + tuple(clause[1:])]
+
     def get_rec_name(self, name):
         if self.training_start_date:
             DATE_FORMAT = '%s' % (Transaction().context['locale']['date'])
@@ -75,12 +80,14 @@ class Product:
             if start_date == end_date:
                 name += self.name + ' (' + str(start_date) + ')'
             else:
-                name += self.name + ' (' + str(start_date) + ' - ' + str(end_date) + ')'
+                name += (self.name + ' (' + str(start_date) + ' - ' +
+                    str(end_date) + ')')
             return name
         else:
             return super(Product, self).get_rec_name(name)
 
-    @depends('training_start_date', 'training_registration', 'training_end_date')
+    @depends('training_start_date', 'training_registration',
+        'training_end_date')
     def on_change_training_start_date(self):
         res = {}
         if not self.training_end_date and self.training_start_date:
@@ -88,7 +95,3 @@ class Product:
         if not self.training_registration and self.training_start_date:
             res['training_registration'] = self.training_start_date
         return res
-
-    @classmethod
-    def search_training(cls, name, clause):
-        return [('template.training',) + tuple(clause[1:])]

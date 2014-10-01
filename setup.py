@@ -12,6 +12,7 @@ MODULE = 'product_training'
 PREFIX = 'trytonzz'
 MODULE2PREFIX = {}
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
@@ -52,7 +53,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         ],
     package_data={
         'trytond.modules.%s' % MODULE: (info.get('xml', [])
-            + ['tryton.cfg',]),
+            + ['tryton.cfg', ]),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
