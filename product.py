@@ -38,17 +38,20 @@ class Product:
         'get_training', searcher='search_training')
     training_start_date = fields.Date('Start Date',
         states={
-            'required': Bool(Eval('training')),
+            'required': Bool(Eval('_parent_template', {}).get('training',
+                Eval('training'))),
             },
         depends=['training'])
     training_end_date = fields.Date('End Date',
         states={
-            'required': Bool(Eval('training')),
+            'required': Bool(Eval('_parent_template', {}).get('training',
+                Eval('training'))),
             },
         depends=['training'])
     training_registration = fields.Date('Registration Date',
         states={
-            'required': Bool(Eval('training')),
+            'required': Bool(Eval('_parent_template', {}).get('training',
+                Eval('training'))),
             },
         depends=['training'],
         help='Last day to registration')

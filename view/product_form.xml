@@ -4,7 +4,10 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
 <data>
     <xpath expr="/form/separator[@name='description']" 
             position="before">
-        <group colspan="6" id="training">
+        <field name="training" invisible="1"/>
+        <group colspan="6"
+            states="{'invisible': Not(Bool(Eval('_parent_template', {}).get('training', Eval('training'))))}"
+            id="training">
             <separator name="training" colspan="6"/>
             <label name="training_start_date"/>
             <field name="training_start_date"/>
@@ -18,7 +21,6 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="training_seats"/>
             <separator name="training_note" colspan="6"/>
             <field name="training_note" colspan="6"/>
-            <field name="training" invisible="1"/>
         </group>
     </xpath>
 </data>
