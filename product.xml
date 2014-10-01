@@ -15,39 +15,91 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="name">template_tree</field>
         </record>
 
-        <!-- product.product -->
-        <record model="ir.ui.view" id="product_view_form">
-            <field name="model">product.product</field>
-            <field name="inherit" ref="product.product_view_form"/>
-            <field name="name">product_form</field>
+        <!-- Product Training -->
+        <!-- product.template -->
+        <record model="ir.ui.view" id="training_template_view_tree">
+            <field name="model">product.template</field>
+            <field name="type">tree</field>
+            <field name="name">training_template_tree</field>
         </record>
-        <record model="ir.ui.view" id="product_view_tree">
-            <field name="model">product.product</field>
-            <field name="inherit" ref="product.product_view_tree"/>
-            <field name="name">product_tree</field>
+        <record model="ir.ui.view" id="training_template_view_form">
+            <field name="model">product.template</field>
+            <field name="type">form</field>
+            <field name="name">training_template_form</field>
         </record>
 
-        <!-- menu -->
-        <record model="ir.action.act_window" id="act_product_training_form">
-            <field name="name">Training</field>
+        <record model="ir.action.act_window" id="act_training_template_form">
+            <field name="name">Training Products</field>
             <field name="res_model">product.template</field>
             <field name="domain">[('training', '=', True)]</field>
         </record>
-        <record model="ir.action.act_window.view" id="act_product_training_list_view">
+        <record model="ir.action.act_window.view" id="act_training_template_list_view">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="product.template_view_tree"/>
-            <field name="act_window" ref="act_product_training_form"/>
+            <field name="view" ref="training_template_view_tree"/>
+            <field name="act_window" ref="act_training_template_form"/>
         </record>
-        <record model="ir.action.act_window.view" id="act_product_training_form_view">
+        <record model="ir.action.act_window.view" id="act_training_template_form_view">
             <field name="sequence" eval="20"/>
-            <field name="view" ref="product.template_view_form"/>
-            <field name="act_window" ref="act_product_training_form"/>
+            <field name="view" ref="training_template_view_form"/>
+            <field name="act_window" ref="act_training_template_form"/>
         </record>
 
-        <menuitem name="Training"
-            parent="product.menu_main_product"
-            action="act_product_training_form"
-            id="menu_product_training"
-            sequence="30"/>
+        <menuitem parent="product.menu_main_product" sequence="1" id="menu_training_template"
+            action="act_training_template_form"/>
+
+        <!-- product.product -->
+        <record model="ir.ui.view" id="training_product_view_tree">
+            <field name="model">product.product</field>
+            <field name="type">tree</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">training_product_tree</field>
+        </record>
+        <record model="ir.ui.view" id="training_product_view_form">
+            <field name="model">product.product</field>
+            <field name="type">form</field>
+            <field name="inherit" eval="None"/>
+            <field name="name">training_product_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_training_product_form">
+            <field name="name">Training Variants</field>
+            <field name="res_model">product.product</field>
+            <field name="domain">[('training', '=', True)]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_training_product_list_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="training_product_view_tree"/>
+            <field name="act_window" ref="act_training_product_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_training_product_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="training_product_view_form"/>
+            <field name="act_window" ref="act_training_product_form"/>
+        </record>
+
+        <menuitem parent="menu_training_template" sequence="1" id="menu_training_product"
+            action="act_training_product_form"/>
+
+        <!-- keywords -->
+        <record model="ir.action.act_window" id="act_training_product_product_form">
+            <field name="name">Training Variants</field>
+            <field name="res_model">product.product</field>
+            <field name="domain">[("template", "=", Eval('active_id'))]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_training_product_product_list_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="training_product_view_tree"/>
+            <field name="act_window" ref="act_training_product_product_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_training_product_product_form_view">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="training_product_view_form"/>
+            <field name="act_window" ref="act_training_product_product_form"/>
+        </record>
+        <record model="ir.action.keyword" id="act_open_training_product_product_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">product.template,-1</field>
+            <field name="action" ref="act_training_product_product_form"/>
+        </record>
     </data>
 </tryton>

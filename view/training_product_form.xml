@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- This file is part product_training module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Product" col="6">
+  <label name="template"/>
+  <field name="template"/>
+  <notebook colspan="6">
+      <page string="Training" id="training">
+        <label name="training_start_date"/>
+        <field name="training_start_date"/>
+        <label name="training_end_date"/>
+        <field name="training_end_date"/>
+        <label name="training_registration"/>
+        <field name="training_registration"/>
+        <label name="training_place"/>
+        <field name="training_place"/>
+        <label name="training_seats"/>
+        <field name="training_seats"/>
+        <separator name="training_note" colspan="6"/>
+        <field name="training_note" colspan="6"/>
+      </page>
+      <page string="General" id="general">
+        <label name="code"/>
+        <field name="code"/>
+        <label name="active"/>
+        <field name="active" xexpand="0" width="100"/>
+      </page>
+  </notebook>
+</form>
