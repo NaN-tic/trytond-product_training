@@ -40,12 +40,56 @@ msgstr "Próximas sesiones"
 
 msgctxt "help:product.product,training_registration:"
 msgid "Last day to register"
-msgstr "Último día de inscripción."
+msgstr "Último día de inscripción"
 
-msgctxt "model:ir.action,name:act_product_training_form"
+msgctxt "model:ir.action,name:act_training_product_form"
+msgid "Training Variants"
+msgstr "Formación Variantes"
+
+msgctxt "model:ir.action,name:act_training_product_product_form"
+msgid "Training Variants"
+msgstr "Formación Variantes"
+
+msgctxt "model:ir.action,name:act_training_template_form"
+msgid "Training Products"
+msgstr "Formación Productos"
+
+msgctxt "model:ir.ui.menu,name:menu_training_product"
+msgid "Training Variants"
+msgstr "Formación Variantes"
+
+msgctxt "model:ir.ui.menu,name:menu_training_template"
+msgid "Training Products"
+msgstr "Formación Productos"
+
+msgctxt "view:product.product:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:product.product:"
+msgid "Product"
+msgstr "Productos"
+
+msgctxt "view:product.product:"
+msgid "Products"
+msgstr "Productos"
+
+msgctxt "view:product.product:"
 msgid "Training"
 msgstr "Formación"
 
-msgctxt "model:ir.ui.menu,name:menu_product_training"
+msgctxt "view:product.template:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:product.template:"
+msgid "Product"
+msgstr "Productos"
+
+msgctxt "view:product.template:"
+msgid "Products"
+msgstr "Productos"
+
+msgctxt "view:product.template:"
 msgid "Training"
 msgstr "Formación"
