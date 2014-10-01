@@ -10,13 +10,9 @@ msgctxt "field:product.product,training_end_date:"
 msgid "End Date"
 msgstr "Data fi"
 
-msgctxt "field:product.product,training_extra:"
-msgid "Extra"
-msgstr "Extra"
-
 msgctxt "field:product.product,training_note:"
 msgid "Training Note"
-msgstr "Nota formació"
+msgstr "Descripció formació"
 
 msgctxt "field:product.product,training_place:"
 msgid "Place"
@@ -24,11 +20,11 @@ msgstr "Lloc"
 
 msgctxt "field:product.product,training_registration:"
 msgid "Registration Date"
-msgstr "Data registre"
+msgstr "Data inscripció"
 
 msgctxt "field:product.product,training_seats:"
 msgid "Seats"
-msgstr "Plaçes"
+msgstr "Places"
 
 msgctxt "field:product.product,training_start_date:"
 msgid "Start Date"
@@ -39,12 +35,12 @@ msgid "Training"
 msgstr "Formació"
 
 msgctxt "field:product.template,training_sessions:"
-msgid "Sessions"
-msgstr "Sessions"
+msgid "Next Sessions"
+msgstr "Properes sessions"
 
 msgctxt "help:product.product,training_registration:"
-msgid "Last day to registration"
-msgstr "Últim dia de registre"
+msgid "Last day to register"
+msgstr "Últim dia d'inscripció."
 
 msgctxt "model:ir.action,name:act_product_training_form"
 msgid "Training"

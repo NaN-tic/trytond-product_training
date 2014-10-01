@@ -17,10 +17,10 @@ class Template:
             'readonly': ~Eval('active', True),
             }, depends=['active'])
     training_sessions = fields.Function(fields.One2Many('product.product',
-        None, 'Sessions'), 'get_training_sessions')
+        None, 'Next Sessions'), 'get_training_sessions')
 
     def get_training_sessions(self, name):
-        '''Get current sessions (start date =< today)'''
+        '''Get next sessions (start date >= today)'''
         Date = Pool().get('ir.date')
         if not self.training:
             return []
@@ -55,7 +55,7 @@ class Product:
                 Eval('training'))),
             },
         depends=['training'],
-        help='Last day to registration')
+        help='Last day to register')
     training_place = fields.Many2One('party.address', 'Place')
     training_seats = fields.Integer('Seats')
     training_note = fields.Text('Training Note', translate=True)
