@@ -79,8 +79,20 @@ msgid "Training"
 msgstr "Formación"
 
 msgctxt "view:product.template:"
+msgid "Accounting"
+msgstr "Contabilidad"
+
+msgctxt "view:product.template:"
+msgid "Accounts"
+msgstr "Cuentas"
+
+msgctxt "view:product.template:"
 msgid "General"
 msgstr "General"
+
+msgctxt "view:product.template:"
+msgid "Prices"
+msgstr "Precios"
 
 msgctxt "view:product.template:"
 msgid "Product"
@@ -89,6 +101,14 @@ msgstr "Productos"
 msgctxt "view:product.template:"
 msgid "Products"
 msgstr "Productos"
+
+msgctxt "view:product.template:"
+msgid "Sessions"
+msgstr "Sesiones"
+
+msgctxt "view:product.template:"
+msgid "Taxes"
+msgstr "Impuestos"
 
 msgctxt "view:product.template:"
 msgid "Training"
