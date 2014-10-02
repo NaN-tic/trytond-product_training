@@ -43,20 +43,20 @@ msgid "Last day to register"
 msgstr "Últim dia d'inscripció"
 
 msgctxt "model:ir.action,name:act_training_product_form"
-msgid "Training Variants"
-msgstr "Formació Variants"
+msgid "Training Sessions"
+msgstr "Formació Sessions"
 
 msgctxt "model:ir.action,name:act_training_product_product_form"
-msgid "Training Variants"
-msgstr "Formació Variants"
+msgid "Training Sessions"
+msgstr "Formació Sessions"
 
 msgctxt "model:ir.action,name:act_training_template_form"
 msgid "Training Products"
 msgstr "Formació Productes"
 
 msgctxt "model:ir.ui.menu,name:menu_training_product"
-msgid "Training Variants"
-msgstr "Formació Variants"
+msgid "Training Sessions"
+msgstr "Formació Sessions"
 
 msgctxt "model:ir.ui.menu,name:menu_training_template"
 msgid "Training Products"

@@ -62,7 +62,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         </record>
 
         <record model="ir.action.act_window" id="act_training_product_form">
-            <field name="name">Training Variants</field>
+            <field name="name">Training Sessions</field>
             <field name="res_model">product.product</field>
             <field name="domain">[('training', '=', True)]</field>
         </record>
@@ -82,7 +82,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
 
         <!-- keywords -->
         <record model="ir.action.act_window" id="act_training_product_product_form">
-            <field name="name">Training Variants</field>
+            <field name="name">Training Sessions</field>
             <field name="res_model">product.product</field>
             <field name="domain">[("template", "=", Eval('active_id'))]</field>
         </record>
