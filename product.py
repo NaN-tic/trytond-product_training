@@ -69,7 +69,15 @@ class Product:
 
     def get_rec_name(self, name):
         if self.training_start_date:
-            DATE_FORMAT = '%s' % (Transaction().context['locale']['date'])
+            if Transaction().context.get('locale'):
+                DATE_FORMAT = '%s' % (Transaction().context['locale']['date'])
+            elif Transaction().context.get('language'):
+                lang, = Pool().get('ir.lang').search([
+                    ('code', '=', Transaction().context.get('language')),
+                    ], limit=1)
+                DATE_FORMAT = '%s' % lang.date
+            else:
+                DATE_FORMAT = '%m/%d/%Y'
 
             start_date = self.training_start_date.strftime(DATE_FORMAT)
             end_date = self.training_end_date.strftime(DATE_FORMAT)
