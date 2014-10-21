@@ -15,6 +15,13 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="name">template_tree</field>
         </record>
 
+        <!-- product.product -->
+        <record model="ir.ui.view" id="product_view_form">
+            <field name="model">product.product</field>
+            <field name="inherit" ref="product.product_view_form"/>
+            <field name="name">product_form</field>
+        </record>
+
         <!-- Product Training -->
         <!-- product.template -->
         <record model="ir.ui.view" id="training_template_view_tree">
