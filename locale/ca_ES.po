@@ -10,6 +10,10 @@ msgctxt "field:product.product,training_end_date:"
 msgid "End Date"
 msgstr "Data fi"
 
+msgctxt "field:product.product,training_info:"
+msgid "Training Info"
+msgstr "Info formació"
+
 msgctxt "field:product.product,training_note:"
 msgid "Training Note"
 msgstr "Descripció formació"
