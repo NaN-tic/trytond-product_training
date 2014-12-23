@@ -16,6 +16,8 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <field name="training_place"/>
         <label name="training_seats"/>
         <field name="training_seats"/>
+        <separator name="training_info" colspan="6"/>
+        <field name="training_info" colspan="6"/>
         <separator name="training_note" colspan="6"/>
         <field name="training_note" colspan="6"/>
       </page>

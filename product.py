@@ -58,6 +58,7 @@ class Product:
         help='Last day to register')
     training_place = fields.Many2One('party.address', 'Place')
     training_seats = fields.Integer('Seats')
+    training_info = fields.Text('Training Info', translate=True)
     training_note = fields.Text('Training Note', translate=True)
 
     def get_training(self, name):
