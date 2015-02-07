@@ -60,6 +60,14 @@ class Product:
     training_seats = fields.Integer('Seats')
     training_info = fields.Text('Training Info', translate=True)
     training_note = fields.Text('Training Note', translate=True)
+    training_type = fields.Selection([
+        ('classroom', 'Classroom'),
+        ('online', 'On-Line'),
+        ], 'Training Type')
+
+    @staticmethod
+    def default_training_type():
+        return 'classroom'
 
     def get_training(self, name):
         return self.template.training if self.template else False
