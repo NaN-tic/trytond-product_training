@@ -34,6 +34,10 @@ msgctxt "field:product.product,training_start_date:"
 msgid "Start Date"
 msgstr "Fecha inicio"
 
+msgctxt "field:product.product,training_type:"
+msgid "Training Type"
+msgstr "Tipo curso"
+
 msgctxt "field:product.template,training:"
 msgid "Training"
 msgstr "Formación"
@@ -65,6 +69,14 @@ msgstr "Formación Sesiones"
 msgctxt "model:ir.ui.menu,name:menu_training_template"
 msgid "Training Products"
 msgstr "Formación Productos"
+
+msgctxt "selection:product.product,training_type:"
+msgid "Classroom"
+msgstr "Presencial"
+
+msgctxt "selection:product.product,training_type:"
+msgid "Virtual"
+msgstr "Virtual"
 
 msgctxt "view:product.product:"
 msgid "General"

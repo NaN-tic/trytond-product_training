@@ -62,7 +62,7 @@ class Product:
     training_note = fields.Text('Training Note', translate=True)
     training_type = fields.Selection([
         ('classroom', 'Classroom'),
-        ('online', 'On-Line'),
+        ('virtual', 'Virtual'),
         ], 'Training Type')
 
     @staticmethod
