@@ -52,23 +52,27 @@ msgstr "Último día de inscripción"
 
 msgctxt "model:ir.action,name:act_training_product_form"
 msgid "Training Sessions"
-msgstr "Formación Sesiones"
+msgstr "Formación sesiones"
 
 msgctxt "model:ir.action,name:act_training_product_product_form"
 msgid "Training Sessions"
-msgstr "Formación Sesiones"
+msgstr "Formación sesiones"
 
 msgctxt "model:ir.action,name:act_training_template_form"
 msgid "Training Products"
-msgstr "Formación Productos"
+msgstr "Formación productos"
 
 msgctxt "model:ir.ui.menu,name:menu_training_product"
 msgid "Training Sessions"
-msgstr "Formación Sesiones"
+msgstr "Formación sesiones"
 
 msgctxt "model:ir.ui.menu,name:menu_training_template"
 msgid "Training Products"
-msgstr "Formación Productos"
+msgstr "Formación productos"
+
+msgctxt "model:res.group,name:group_product_training"
+msgid "Product Training"
+msgstr "Formación productos"
 
 msgctxt "selection:product.product,training_type:"
 msgid "Classroom"
