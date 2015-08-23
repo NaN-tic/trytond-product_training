@@ -3,7 +3,7 @@
 # the full copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
-from trytond.pyson import Eval, Bool
+from trytond.pyson import Eval, Bool, Not
 from trytond.transaction import Transaction
 from trytond.model.fields import depends
 
@@ -68,6 +68,13 @@ class Product:
     @staticmethod
     def default_training_type():
         return 'classroom'
+
+    @classmethod
+    def view_attributes(cls):
+        return super(Product, cls).view_attributes() + [
+            ('//group[@id="training"]', 'states', {
+                    'invisible': Not(Bool(Eval('_parent_template', {}).get('training', Eval('training')))),
+                    })]
 
     def get_training(self, name):
         return self.template.training if self.template else False
