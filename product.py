@@ -113,9 +113,7 @@ class Product:
     @depends('training_start_date', 'training_registration',
         'training_end_date')
     def on_change_training_start_date(self):
-        res = {}
         if not self.training_end_date and self.training_start_date:
-            res['training_end_date'] = self.training_start_date
+            self.training_end_date = self.training_start_date
         if not self.training_registration and self.training_start_date:
-            res['training_registration'] = self.training_start_date
-        return res
+            self.training_registration = self.training_start_date
