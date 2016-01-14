@@ -72,9 +72,16 @@ class Product:
     @classmethod
     def view_attributes(cls):
         return super(Product, cls).view_attributes() + [
+            ('//page[@id="training"]', 'states', {
+                    'invisible': Not(Bool(Eval('_parent_template', {})
+                            .get('training', Eval('training')))),
+                    })
+            ] + [
             ('//group[@id="training"]', 'states', {
-                    'invisible': Not(Bool(Eval('_parent_template', {}).get('training', Eval('training')))),
-                    })]
+                    'invisible': Not(Bool(Eval('_parent_template', {})
+                            .get('training', Eval('training')))),
+                    })
+            ]
 
     def get_training(self, name):
         return self.template.training if self.template else False
