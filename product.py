@@ -8,10 +8,10 @@ from trytond.transaction import Transaction
 from trytond.model.fields import depends
 
 __all__ = ['Template', 'Product']
-__metaclass__ = PoolMeta
 
 
 class Template:
+    __metaclass__ = PoolMeta
     __name__ = "product.template"
     training = fields.Boolean('Training', states={
             'readonly': ~Eval('active', True),
@@ -34,6 +34,7 @@ class Template:
 
 
 class Product:
+    __metaclass__ = PoolMeta
     __name__ = 'product.product'
     training = fields.Function(fields.Boolean('Training'),
         'get_training', searcher='search_training')
